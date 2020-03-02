@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build/dist"
+  },
+  "files": [
+    "./build/routes.ts",
+    "./build/swagger.json",
+    "./src/cmds/main.ts"
+  ]
+}

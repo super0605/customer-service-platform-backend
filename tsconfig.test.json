@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build/test/dist",
+    "typeRoots": [
+      "./test/types",
+      "./node_modules/@types"
+    ]
+  },
+  "files": [
+    "./build/test/routes.ts",
+    "./build/test/swagger.json"
+  ],
+  "include": [
+    "./test/setup/*.ts",
+    "./test/**/*.e2e.ts",
+    "./test/**/*.test.ts"
+  ],
+  "exclude": [
+    "./test/types"
+  ]
+}

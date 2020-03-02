@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+POSTGRES="psql --username ${POSTGRES_USER}"
+
+echo "Creating database: ${POSTGRES_DB1}"
+
+$POSTGRES <<EOSQL
+CREATE DATABASE "${POSTGRES_DB1}" OWNER ${POSTGRES_USER};
+EOSQL
+
+echo "Creating database: ${POSTGRES_DB2}"
+
+$POSTGRES <<EOSQL
+CREATE DATABASE "${POSTGRES_DB2}" OWNER ${POSTGRES_USER};
+EOSQL
